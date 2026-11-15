@@ -20,8 +20,6 @@ Docker, Compose, Dev Container를 배우려고 만든 실습 프로젝트입니�
 
 ## 실행 방법
 
-아래 명령은 실행 결과를 다시 확인한 것이 아니라, 설정 파일(`compose.yaml`, `application.properties`, `Dockerfile`)을 읽고 적었습니다.
-
 ### 1. Dev Container로 실행
 
 1. VS Code에 Dev Containers 확장을 설치하고 이 폴더를 엽니다.
