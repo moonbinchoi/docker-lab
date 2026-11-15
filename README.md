@@ -4,10 +4,17 @@ Docker, Compose, Dev Container를 배우려고 만든 실습 프로젝트입니�
 
 - 언어와 도구: Java 25, Spring Boot 4.1.1, Gradle 9.8.1(wrapper), Postgres 18
 - 앱: `GET /` 엔드포인트 하나. DB의 `memo` 테이블 첫 행을 읽어 돌려줍니다.
+- 학습 기간: 2026-10-14 ~ 2026-10-16, docker-devcontainer 트랙 4~6회차 (주: 커밋 기록은 Public으로 전환하며 공개용으로 정리한 1개뿐이고, 회차별 진행은 아래 학습 기록에 있음).
 
 ## 학습 기록
 
-이 프로젝트는 [dev-learning-log](https://github.com/moonbinchoi/dev-learning-log)의 [docker-devcontainer 트랙](https://github.com/moonbinchoi/dev-learning-log/tree/main/lecture/docker-devcontainer) 실습 프로젝트입니다. 0~6회차의 레슨과 학습 기록이 회차별로 남아 있습니다.
+이 프로젝트는 [dev-learning-log](https://github.com/moonbinchoi/dev-learning-log)의 [docker-devcontainer 트랙](https://github.com/moonbinchoi/dev-learning-log/tree/main/lecture/docker-devcontainer) 실습 프로젝트입니다. 4~6회차에 회차마다 하나씩 만들었습니다.
+
+| 회차 | 만든 것 | 학습 기록 |
+|---|---|---|
+| 4회차 | `Dockerfile`, 빌드 캐시 실험 | [0006 빌드 캐시와 컨텍스트](https://github.com/moonbinchoi/dev-learning-log/blob/main/lecture/docker-devcontainer/learning-records/0006-build-cache-and-context.md) |
+| 5회차 | `compose.yaml`의 `app`, `db` | [0007 Compose 프로젝트와 down](https://github.com/moonbinchoi/dev-learning-log/blob/main/lecture/docker-devcontainer/learning-records/0007-compose-project-and-down.md) |
+| 6회차 | `compose.yaml`의 `dev`, `.devcontainer/devcontainer.json` | [0008 dev container 이미지 방식과 Compose 방식](https://github.com/moonbinchoi/dev-learning-log/blob/main/lecture/docker-devcontainer/learning-records/0008-dev-container-image-vs-compose.md) |
 
 ## 구성
 
