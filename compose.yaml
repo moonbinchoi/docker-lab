@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: pw
+      POSTGRES_DB: docker_lab
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d docker_lab"]
+      interval: 5s
+  app:
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/docker_lab
+    depends_on:
+      db:
+        condition: service_healthy
+  dev:
+    image: mcr.microsoft.com/devcontainers/java:25
+    command: sleep infinity
+    volumes:
+      - .:/workspaces/docker-lab
+      - gradle-cache:/home/vscode/.gradle
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/docker_lab
+      SERVER_PORT: "8081"
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  pgdata:
+  gradle-cache:

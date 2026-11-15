@@ -1,0 +1,9 @@
+{
+    "name": "docker-lab",
+    "dockerComposeFile": "../compose.yaml",
+    "service": "dev",
+    "runServices": ["dev", "db"],
+    "workspaceFolder": "/workspaces/docker-lab",
+    "postCreateCommand": "sudo chown vscode /home/vscode/.gradle",
+    "forwardPorts": [8081]
+}
